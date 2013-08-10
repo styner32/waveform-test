@@ -1,12 +1,13 @@
 class WT.WaveformController
   sizeOfSegment: 1024
   constructor: (@$container, @waveformData) ->
-    @template="<div class='waveform'></div>"
-    @$el=$(@template)
+    @template="<div class='frame'><div class='waveform'></div></div>"
+    @$frame=$(@template)
+    @$waveform=@$frame.find('.waveform')
 
   render: ->
-    @$container.append(@$el)
-    @$el.css("width", "#{@waveformData.length}px")
+    @$container.append(@$frame)
+    @$waveform.css("width", "#{@waveformData.length}px")
     numberOfSegment = parseInt(@waveformData.length/@sizeOfSegment)
 
     for i in [0..numberOfSegment]
@@ -20,7 +21,7 @@ class WT.WaveformController
         segment.push(@waveformData[waveformDataIndex])
 
       waveform = new Waveform({
-        container: @$el[0]
+        container: @$waveform[0]
         innerColor: "blue"
         outerColor: "gray"
         data: segment

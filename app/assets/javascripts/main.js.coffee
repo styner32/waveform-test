@@ -4,7 +4,7 @@ class WT.Main
 
   constructor: ->
     @$player = videojs('player')
-    @$waveformContainer = $(".frame")
+    @$waveformContainer = $(".waveforms")
     @waveforms = []
 
   init: ->
@@ -23,6 +23,6 @@ class WT.Main
         @$player.on 'timeupdate', (e) =>
           currentTimeInSecond = e.currentTarget.currentTime
           position = currentTimeInSecond * @pixelPerSecond
-          waveform.$el.css "left", -position + "px"
+          waveform.$waveform.css "left", -position + "px"
 
       reader.readAsText(file)
