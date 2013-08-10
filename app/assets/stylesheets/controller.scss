@@ -1,3 +1,13 @@
-.hidden {
-  display: none;
+.frame {
+  position: relative;
+  width: 640px;
+  overflow: hidden;
+  height: 100px;
+
+  #waveform {
+    position: absolute;
+    canvas {
+      float: left;
+    }
+  }
 }
