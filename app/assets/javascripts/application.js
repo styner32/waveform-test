@@ -5,4 +5,9 @@
 //= require video
 //= require waveform
 //= require bootstrap
-//= require controller
+
+//= require wt
+//= require main
+//= require waveform-controller
+
+

@@ -1,0 +1,18 @@
+src_files:
+  - assets/application.js
+
+stylesheets:
+  - stylesheets/**/*.css
+
+helpers:
+  - helpers/**/*.js
+
+spec_files:
+  - '**/*spec.js'
+  - '**/complied/*spec.js.coffee'
+
+spec_dir: spec/javascripts
+
+asset_pipeline_paths:
+  - app/assets
+  - spec/javascripts

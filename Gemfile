@@ -15,14 +15,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'jasmine', '~> 2.0.0.rc2'
+  gem 'guard', '~> 1.8.2'
+  gem 'guard-coffeescript', '~> 1.3.2'
+end

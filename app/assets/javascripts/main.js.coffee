@@ -1,4 +1,4 @@
-class window.Controller
+class WT.Main
   pixelPerSecond: 30
   sizeOfSegment: 1024
 
@@ -22,7 +22,6 @@ class window.Controller
   renderWaveform: (e) ->
     waveformData = $.parseJSON(e.target.result)
     @$waveform.css('width', "#{waveformData.length}px")
-
 
     for i in [0..parseInt(waveformData.length/@sizeOfSegment)]
       startIndex = i*@sizeOfSegment
