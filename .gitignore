@@ -17,3 +17,6 @@
 
 /.idea
 /spec/javascripts/compiled
+
+.ruby-version
+/vendor/bundle
